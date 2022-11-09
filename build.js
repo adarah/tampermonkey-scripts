@@ -1,5 +1,6 @@
-import browserslistToEsbuild from 'browserslist-to-esbuild';
+import browserlist from 'browserslist';
 import { build } from 'esbuild';
+import { esbuildPluginBrowserslist } from 'esbuild-plugin-browserslist';
 import fs from 'fs';
 
 fs.readdirSync('bin').forEach(async f => {
@@ -9,7 +10,9 @@ fs.readdirSync('bin').forEach(async f => {
         entryPoints: [`${dir}/main`],
         outdir: `dist/${f}`,
         bundle: true,
-        target: browserslistToEsbuild(),
+        plugins: [
+            esbuildPluginBrowserslist(browserlist(), { printUnknownTargets: false })
+        ],
         legalComments: 'inline',
         banner: {
             js: metadata.default
