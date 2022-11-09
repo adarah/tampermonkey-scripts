@@ -9,7 +9,7 @@ const metadata = {
     match: 'https://dashboard.twitch.tv/u/*/stream-manager',
     icon: 'https://www.google.com/s2/favicons?sz=64&domain=twitch.tv',
     homepage: 'https://github.com/adarah/tampermonkey-scripts',
-    namespace: 'https://github.com/adarah'
+    namespace: 'adarah'
 }
 
 const banner = `${generate(metadata)}
