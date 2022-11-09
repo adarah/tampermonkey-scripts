@@ -12,6 +12,7 @@
     "browserslist-to-esbuild": "^1.2.0",
     "esbuild": "^0.15.13",
     "typescript": "^4.8.4",
+    "userscript-metadata-generator": "^0.0.11",
     "vitest": "^0.25.1"
   },
   "repository": {
