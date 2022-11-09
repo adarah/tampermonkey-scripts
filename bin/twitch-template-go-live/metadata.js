@@ -6,7 +6,7 @@ const metadata = {
     description: `Make your life easier by templating Twitch's Go Live Notification field!`,
     version: '0.2.0',
     author: 'adarah',
-    match: 'https://dashboard.twitch.tv/u/*/stream-manager',
+    match: 'https://dashboard.twitch.tv/u/*',
     icon: 'https://www.google.com/s2/favicons?sz=64&domain=twitch.tv',
     homepage: 'https://github.com/adarah/tampermonkey-scripts',
     namespace: 'adarah'
