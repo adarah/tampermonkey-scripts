@@ -1,6 +1,7 @@
 {
 	"name": "Node.js & TypeScript",
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:18-bullseye"
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:18-bullseye",
+	"postCreateCommand": "npm install"
 
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
 	// "features": {},
