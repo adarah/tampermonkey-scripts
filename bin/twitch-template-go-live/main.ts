@@ -5,7 +5,6 @@ class Templater implements Observer {
 
     onMount(el: Element) {
         if (!(el instanceof HTMLInputElement)) return
-        console.log('mounted')
 
         const updateTemplateCallback = (mutations: MutationRecord[]) => {
             const record = mutations[mutations.length - 1]
@@ -20,7 +19,6 @@ class Templater implements Observer {
     }
 
     onDestroy() {
-        console.log('destroy')
         this._observer?.disconnect()
     }
 
