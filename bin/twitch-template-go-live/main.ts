@@ -23,8 +23,15 @@ class Templater implements Observer {
     }
 
     private setGoLiveNotif(categoryInput: HTMLInputElement) {
-        // @ts-expect-error this variable is defined in the banner, see metadata.js
-        const msg = template.replaceAll('{category}', categoryInput.value)
+        let msg: string
+        // @ts-expect-error genMessage is defined in the banner
+        if (typeof genMessage === 'function') {
+            // @ts-expect-error genMessage is defined in the banner
+            msg = genMessage(categoryInput.value)
+        } else {
+            // @ts-expect-error template is defined in the banner
+            msg = template.replaceAll('{category}', categoryInput.value)
+        }
 
         const el = document.getElementById('edit-broadcast-go-live-formgroup') as HTMLTextAreaElement | null
         if (el === null) throw Error('Go Live textarea was not found!')
